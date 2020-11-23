@@ -1,0 +1,561 @@
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+/*--reset--*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/*-- start editing from here --*/
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*-- end reset --*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #0a8796;
+    background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+    background-size: cover;
+}
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+/*-- agileits-main --*/
+.agileits-main {
+    padding: 3em 0 0;
+}
+.wthree-row {
+    width: 49%;
+    margin: 3em auto;
+}
+p {
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+}
+#videoContainer { 
+	height: 31em;
+	background: none;
+	margin: 0 auto;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	-ms-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+#videoContainer.fullScreen {
+	width: 100vw !important;
+	height: 100vh !important;
+}
+
+#videoContainer.small .intensityBar { width: 50px !important; }
+
+#videoContainer.small .playButton {
+	margin: 0 !important;
+	margin-right: 5px !important;
+} 
+#videoContainer.small .playPause, #videoContainer.small .volume .icon, #videoContainer.small .scale .icon {
+	width: 15px !important;
+	height: 15px !important;
+}
+
+#videoContainer.small .progressBar { height: 6px !important; }
+
+#videoContainer.small .overlay .button {
+	width: 50px !important;
+	height: 50px !important;
+}
+
+#videoContainer.small .time { display: none !important; }
+
+#videoContainer .overlay {
+    width: 100%;
+    height: 100%;
+    background:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    border-radius: 5px;
+}
+
+#videoContainer .overlay .button {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: url(../images/play-button.png);
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%; 
+	background-size: 100%;
+	-webkit-transform: translate(-50%, calc(-50% - 30px));
+	-moz-transform: translate(-50%, calc(-50% - 30px));
+	-o-transform: translate(-50%, calc(-50% - 30px));
+	-ms-transform: translate(-50%, calc(-50% - 30px));
+	transform: translate(-50%, calc(-50% - 30px));
+	cursor: pointer;
+	-webkit-transition: width 0.2s, height 0.2s;
+	-moz-transition: width 0.2s, height 0.2s;
+	-o-transition: width 0.2s, height 0.2s;
+	-ms-transition: width 0.2s, height 0.2s;
+	transition: width 0.2s, height 0.2s;
+}
+
+#videoContainer .overlay .button:hover {
+	width: 90px;
+	height: 90px;
+}
+
+#videoContainer #video {
+	width: 100%;
+	height:100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	background: url(../video/img1.jpg)no-repeat center;
+    background-size: cover;
+}
+
+#videoContainer #video video {
+	width: 100%; 
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 5px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0; 
+}
+
+#videoContainer #controls {
+	width: 100%;
+	height: 60px;
+	background:#00e0fd;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	z-index: 9999;
+}
+
+#videoContainer #controls .playButton {
+	width: 70px;
+	height: 100%;
+	background: #04b8ce;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 20px;
+	cursor: pointer;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+	border-bottom-left-radius: 5px;
+}
+
+#videoContainer #controls .playButton:hover { background: #06a7bb; }
+
+#videoContainer #controls .playButton .playPause {
+	width: 25px;
+	height: 25px;
+	background: url(../images/play.png);
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%; 
+	background-size: 100%;
+}
+
+#videoContainer #controls .ProgressContainer {
+	color: #fff;
+	width: -webkit-calc(100% - 100px);
+	width: calc(100% - 100px);
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+}
+
+#videoContainer #controls .ProgressContainer .progressBar {
+	width: 100%;
+	height: 8px;
+	background: #0a8796;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	-ms-border-radius: 20px;
+	border-radius: 20px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+#videoContainer #controls .ProgressContainer .progressBar:hover + .time {
+	-moz-opacity: 1;
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-o-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+
+#videoContainer #controls .ProgressContainer .progressBar .progress {
+	width: 0%;
+	height: 100%;
+	background: #fff;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	-ms-border-radius: 20px;
+	border-radius: 20px;
+}
+
+#videoContainer #controls .ProgressContainer .timer {
+	margin: 0 10px;
+	font-family: Arial, sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	font-weight: 300;
+	color:#0a8796;
+	letter-spacing: 1px;
+}
+
+#videoContainer #controls .ProgressContainer .time {
+	width: 80px;
+	height: 25px;
+	background: #0a8796;
+	position: absolute;
+	top: -20px;
+	left: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #fff;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	line-height: 25px;
+	font-size: 12px;
+	letter-spacing: 1px;
+	opacity: 0;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	-o-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-transition: transform 0.3s, opacity 0.3s;
+	-moz-transition: transform 0.3s, opacity 0.3s;
+	-o-transition: transform 0.3s, opacity 0.3s;
+	-ms-transition: transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+#videoContainer #controls .ProgressContainer .time::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 25px;
+	left: 33px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #0a8796;
+}
+
+#videoContainer #controls .volume {
+	width: 150px;
+	height: 100%;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	position: relative;
+}
+
+#videoContainer #controls .volume .icon {
+	width: 25px;
+	height: 25px;
+	background: url(../images/volume.png);
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%; 
+	background-size: 100%;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+#videoContainer #controls .volume .intensityBar {
+	width: 100px;
+	height: 4px;
+	background: #0a8796;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	max-width: 100px;
+	overflow: hidden;
+	transform-origin: right center;
+	cursor: pointer;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+#videoContainer #controls .volume .intensityBar .intensity {
+	width: 50%;
+	height: 100%;
+	background: #fff;
+}
+
+#videoContainer #controls .scale {
+	width: 70px;
+	height: 100%;
+	background: #00afc6;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 5px;
+	cursor: pointer;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s; 
+	transition: all 0.4s;
+	border-bottom-right-radius: 5px;
+}
+
+#videoContainer #controls .scale:hover { background: #06a7bb; }
+
+#videoContainer #controls .scale .icon {
+	width: 25px;
+	height: 25px; 
+	background: url(../images/expand.png);
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%; 
+	background-size: 100%;
+} 
+/*-- //agileits-main --*/
+/*-- copyright --*/
+.copy-agileits{ 
+    text-align: center;
+	margin:2em 0;
+}
+.copy-agileits p {
+    font-size: 0.9em;
+    color: #fff;
+    line-height: 1.8em;
+    letter-spacing: 1px;
+}
+.copy-agileits p a{
+    color: #fff; 
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	transition: 0.5s all;
+}
+.copy-agileits p a:hover{
+    color: #00e0fd;	
+}
+/*-- //copyright --*/
+/*-- responsive-design --*/
+@media(max-width:1440px){
+.wthree-row {
+    width: 55%; 
+}
+}
+@media(max-width:1366px){
+h1 {
+    font-size: 2.6em; 
+}
+#videoContainer {
+    height: 29em;
+}
+}
+@media(max-width:1280px){
+#videoContainer {
+    height: 28em;
+} 
+}
+@media(max-width:1080px){
+h1 {
+    font-size: 2.3em;
+    letter-spacing: 2px;
+}
+.wthree-row {
+    width: 66%;
+}
+}
+@media(max-width:1024px){
+#videoContainer {
+    height: 27em;
+}
+}
+@media(max-width:991px){
+.wthree-row { 
+    margin: 2em auto;
+}
+#videoContainer {
+    height: 26em;
+}
+}
+@media(max-width:800px){
+h1 {
+    font-size: 2.2em; 
+}
+#videoContainer {
+    height: 24em;
+}
+.wthree-row {
+    width: 75%;
+}
+}
+@media(max-width:736px){
+#videoContainer {
+    height: 22.5em;
+}
+}
+@media(max-width:667px){
+#videoContainer #controls { 
+    height: 50px; 
+}
+#videoContainer {
+    height: 20.3em;
+}
+h1 {
+    font-size: 2em;
+}
+#videoContainer {
+    height: 20em;
+}
+}
+@media(max-width:600px){
+#videoContainer {
+    height: 18.5em;
+}
+.agileits-main {
+    padding: 2em 0 0;
+}
+}
+@media(max-width:568px){
+h1 {
+    font-size: 1.7em;
+}
+.copy-agileits p { 
+    padding: 0 1em;
+} 
+.wthree-row {
+    width: 80%;
+} 
+}
+@media(max-width:480px){
+h1 {
+    font-size: 1.5em;
+}
+.wthree-row {
+    width: 85%;
+}
+#videoContainer {
+    height: 17.5em;
+} 
+}
+@media(max-width:414px){
+#videoContainer {
+    height: 15.5em;
+}
+#videoContainer #controls .volume .icon { 
+    margin-right: 3px;
+}
+#videoContainer #controls .volume {
+    width: 100px; 
+} 
+#videoContainer #controls .ProgressContainer .timer {
+    margin: 0 5px; 
+    font-size: 11px; 
+    letter-spacing: 0px;
+}
+}
+@media(max-width:384px){
+h1 {
+    font-size: 1.3em;
+    letter-spacing: 1px;
+}
+#videoContainer {
+    height: 14.5em;
+}
+.copy-agileits p {
+    font-size: 0.8em; 
+    letter-spacing: 1px;
+}
+}
+@media(max-width:375px){
+.wthree-row {
+    width: 90%;
+}
+}
+@media(max-width:320px){
+#videoContainer #controls {
+    height: 45px;
+}
+.wthree-row {
+    width: 92%;
+}
+#videoContainer {
+    height: 13em;
+} 
+}
+/*-- //responsive-design --*/

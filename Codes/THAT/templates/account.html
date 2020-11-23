@@ -1,0 +1,39 @@
+{%extends "layout.html" %}
+{% block content %}
+ <div class="content-section" >
+ 	<div class="media">
+ 		<img class="rounded-circle account-img"  src="{{image_file}}">
+ 		<div class="media-body">
+ 			<h2 class="account-heading">{{current_user.username}}</h2>
+ 			<p class="text-secondary">{{current_user.email}}</p>
+ 		</div>
+ 	<div style="text-align: center;">
+ 		<div>
+            <a class="btn btn-secondary btn-sm m-1" href="{{url_for('update_account')}}"> Update account</a>
+        </div>
+        <div>
+            <button type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal" > Delete Account</button>
+        </div>
+    </div>
+ 	</div>
+ </div>
+  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModalLabel">This will permanently delete your account.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <form action="{{url_for('delete_account')}}"  method='POST'>
+             <input class="btn bnt-danger" type="submit" value="Delete"> 
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

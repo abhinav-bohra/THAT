@@ -1,0 +1,42 @@
+{% extends "layout.html"%}
+{% block content %}
+<h1> Lecture </h1> <hr>
+    <article class="media content-section">
+      <div class="media-body">
+        <h3 class="article-title" >{{ lecture.title }}</h3>
+        <p class="article-content">{{ lecture.details }}</p>
+        <div class="article-metadata">
+          <p class="mr-4 ">Date : {{ lecture.date }}  | Time : {{ lecture.starttime }}--{{lecture.endtime}} </p>
+          <p class="mr-4 ">Link to Video:{{ lecture.video_path}}</p>
+        </div>
+      
+        <div>
+          <a class="btn btn-secondary btn-sm m-1" href="{{url_for('update_lecture',lecture_id=lecture.id)}}"> Update</a>
+          <button type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal"> Delete </button>
+        </div>
+     
+      </div>
+    </article>
+      <!-- Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModalLabel">Delete Lecture?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+           <div class="modal-body">
+            This will delete the lecture "{{lecture.title}}" from your list.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <form action="{{url_for('delete_lecture',lecture_id=lecture.id)}}"  method='POST'>
+             <input class="btn bnt-danger" type="submit" value="Delete"> 
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock content%}

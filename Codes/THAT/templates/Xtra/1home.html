@@ -1,0 +1,30 @@
+{%extends "layout.html" %}
+{% block content %}
+
+<h1>Welcome to THAT</h1>
+<div style="height: 920px;">
+
+</div>
+    <div class="col-md-4" style="margin-top: 50px;">
+      <div class="content-section">
+        <h3>Infobar</h3>
+        <p class='text-bold'>Latest Stats:
+            <ol class="list-group">
+              <li class="list-group-item list-group-item-warning">{{db.session.query(User).count()}} users have already registered.</li>
+              <li class="list-group-item list-group-item-success">A total of {{db.session.query(Lecture).count()}} lectures have been scheduled.</li>
+            </ol>
+           
+            What are you waiting for? <a href="{{url_for('register')}}">Join Lecture now</a>    .<br>
+      </div>
+        <div class="content-section" >
+
+            <p class='text-bold'>Quick Links:
+             <ol class="list-group">
+            <li class="list-group-item list-group-item-light"><a href="#">Learn about App Passwords</a></li>
+            <li class="list-group-item list-group-item-light"><a href="#"> Learn about developers</a> </li>
+            <li class="list-group-item list-group-item-light"><a href="#" >Report Bug</a></li>
+          </ol>
+        </p>
+      </div>
+    </div>
+{% endblock %}

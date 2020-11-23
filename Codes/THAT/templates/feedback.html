@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group card-body">
+                <legend class="border-bottom mb-4">Send Feedback to your Professor.</legend>
+                <div class="form-group card-body">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                  <div class="form-group card-body">
+                    {{ form.professor_name.label(class="form-control-label") }}
+                    {% if form.professor_name.errors %}
+                        {{ form.professor_name(class="form-control form-control-lg is-invalid") }}
+                        
+                    {% else %}
+                        {{ form.professor_name(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                 <div class="form-group card-body">
+                   {{ form.feedback.label(class="form-control-label") }}
+                        {{ form.feedback(class="form-control form-control-lg") }}
+                 
+                </div>
+            </fieldset>
+            <div class="form-group card-body" style="margin-right: -200px;">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body" style="background-color: white;">
+                <h4 class="card-title">
+                    <i class="fas fa-file-archive"></i>
+                    Feedback
+                </h4>
+                <h3 class="mb-6">Feedback is integral <span class="text-muted h4 font-weight-normal">part of inclusive education<br></span></h3>
+                <!canvas id="sales-chart"></canvas>
+                <div><br>
+                    <img src="{{url_for('static',filename='images/feedback.svg')}}" style="width: 440px; height: 360px; margin-left: 50px;">  
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
+ {%endblock%}

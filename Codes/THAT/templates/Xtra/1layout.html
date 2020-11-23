@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{{url_for('static',filename='images/favicon.png')}}" type="image/gif" sizes="16x16">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"  href="{{url_for('static', filename='main.css')}}">
+   <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/authy-form-helpers/2.3/form.authy.min.css" data-turbolinks-track="reload" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/authy-form-helpers/2.3/form.authy.min.js" data-turbolinks-track="reload"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="  crossorigin="anonymous"></script>
+	{% if title %}
+		<title>THAT-{{title}}</title>
+	{% else %}
+		<title>THAT</title>
+	{% endif %}
+</head>
+<body>
+
+	<header class="site-header">
+	  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+	    <div class="container">
+	      <a class="navbar-brand mr-4 ml-20" href="/">THAT</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	      </button>
+	      <div class="collapse navbar-collapse" id="navbarToggle">
+	        <div class="navbar-nav mr-auto">
+	          <!--<a class="nav-item nav-link" href="/" onMouseOver="this.style.btn='white'">Home</a>-->
+            <a href="/" class="nav-item nav-link" style="padding: 0"><img src="{{url_for('static',filename='images/homeicon.png')}}" alt="home" height="48px" width="48px" class="fill2" style="object-fit: cover;" title="Home"></a>
+            &nbsp;&nbsp;&nbsp;
+	         <a href="/dashboard" class="nav-item nav-link" style="padding: 0"><img src="{{url_for('static',filename='images/dash2.png')}}" alt="dash" height="43px" width="43px" class="fill2" style="object-fit: cover;" title="Dashboard"></a>
+	        </div>
+          <div class="navbar-nav">
+	        <!-- Navbar Right Side -->
+          {%if current_user.is_authenticated%}
+          <a class="nav-item nav-link" href="/lecture/new">Schedule Lecture</a>
+          <a class="nav-item nav-link" href="/logout">Logout</a>
+          <a class="nav-item nav-link" href="/account">Account</a>
+          {%else%}
+	        <a class="nav-item nav-link" href="/login">Login</a>
+	        <a class="nav-item nav-link" href="/register">Register</a>
+	         {%endif%}
+           <a class="nav-item nav-link" href="/contact_us">Contact us</a>
+          </div>
+	      </div>
+	    </div>
+	  </nav>
+	</header>
+
+	<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8">
+      {%with messages=get_flashed_messages(with_categories=true)%}
+         {%if messages%}
+         	{%for category ,message in messages %}
+         		<div class="alert alert-{{category}}">
+         			{{message}}
+         		</div>
+         	{%endfor%}
+         {%endif%}
+       {%endwith%}
+      {% block content %}{% endblock %}
+      </div>
+    </div>
+</main>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

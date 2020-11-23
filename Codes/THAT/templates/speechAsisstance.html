@@ -1,0 +1,145 @@
+{% extends "layout.html"%}
+{% block content %}
+<div class="page-header">
+	<h3 class="page-title">Speech Assistance</h3><hr style="color: white;">
+</div><hr>
+
+<div class="row grid-margin">
+	<div class="col-12">
+		<div class="card card-statistics" style="width: 1200px;">
+			<div class="card-body">
+				<div class="d-flex flex-column flex-md-row align-items-left">
+					<div class="statistics-item">
+						<p>
+							<i class="icon-sm fa fa-play-circle mr-2"></i>
+							Rate of Speech Test
+						</p>
+						<button id="RoS_btn" class="btn btn-outline-light btn-sm" data-toggle="modal" data-target="#basicExampleModal">
+							<h5>Take a Test Now</h5>
+						</button>
+						
+						<!-- Modal -->
+						<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-body">
+										<img src="{{url_for('static',filename='images/popup.svg')}}" style="width: 440px; height: 300px; align-self: center;">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="statistics-item" style="margin-left: -30px;">
+						<p>
+							<i class="icon-sm fas fa-microphone-alt mr-2"></i>
+							Your Speech Rate
+						</p>
+                        <h3 id="Your_RoS">-- &nbsp; words/min</h3>
+                            
+					</div>
+					<div class="statistics-item" style="margin-left: -30px;">
+						<p>
+							<i class="icon-sm fas fa-signal mr-2"></i>
+							Average Speech Rate
+						</p>
+						<h3>120 words/min</h3>
+					</div>
+					
+					<div class="statistics-item" style="margin-left: -30px;">
+						<p>
+							<i class="icon-sm fas fa-chart-bar mr-2"></i>
+							Previous Speech Rate
+						</p>
+						<h3>NA</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body" style="background-color: white;">
+				<h4 class="card-title">
+					<i class="fas fa-microphone-alt"></i>
+					Your Rate of Speech
+				</h4>
+				<h3 class="mb-6">Analyse your speech <span class="text-muted h4 font-weight-normal">to express better<br></span></h3>
+                <!canvas id="sales-chart"></canvas>
+                <div><br>
+                    <img src="{{url_for('static',filename='images/speechAsisstance.svg')}}" style="width: 440px; height: 300px; margin-left: 50px;">  
+                    </div>
+                   
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body" style="background-color: white;">
+				<h4 class="card-title">
+					<i class="fas fa-info-circle"></i>
+					Note
+				</h4>              
+				<h5><br>Speaking Rate (wpm) = total words / number of minutes</h5>
+				<br><br>
+				<h4 style="color:#521665;"><b>Average Speech Rates <br></h4><br>
+					<h6>
+						<b>Conversational:</b> Between 120 - 150 wpm<br><br>
+						<b>Presentations</b>: Between 100 - 150 wpm for a comfortable pace <br><br>
+						<b>Audiobooks:</b> Between 150 - 160 wpm, which is the upper range that people comfortably hear and vocalise words<br><br>
+					</p><br>
+					<p style="color: #5F0A60;">*wpm = words per minute</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="message_Card" class="col-md-12 grid-margin stretch-card" style="visibility: hidden">
+		<div class="card">
+			<div class="card-body" style="background-color: white;">
+				<h4 class="card-title">
+					<i class="fas fa-info-circle"></i>
+					Details
+				</h4>              
+				<h3><br>Speech Analysis</h3><hr>
+				<div id="message2"><h5 class="mb-6">You said        : <span class="text-muted h5 font-weight-normal" >message will be displayed<br></span></h5></div>
+                <div id="message3"><h5 class="mb-6">Words in Speech : <span class="text-muted h5 font-weight-normal" >message will be displayed<br></span></h5></div>
+                <div id="message4"><h5 class="mb-6">Rate of Speech  : <span class="text-muted h5 font-weight-normal" >message will be displayed<br></span></h5></div>
+                
+			</div>
+			</div>
+		</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+
+$(function() {
+    $('#RoS_btn').on('click', function(e) {
+        e.preventDefault() 
+		 
+		$.getJSON("/speechAsisstance_RoS").done(function (data) {
+			console.log(data)
+            var var_m1=document.getElementById('Your_RoS');
+			var_m1.innerHTML = data.message1;
+
+			$("#basicExampleModal").modal('hide');
+			document.getElementById("message_Card").style.visibility = "visible";
+			
+			var var_m2=document.getElementById('message2');
+			var_m2.innerHTML = data.message2;
+			
+			var var_m3=document.getElementById('message3');
+			var_m3.innerHTML = data.message3;
+			
+			var var_m4=document.getElementById('message4');
+			var_m4.innerHTML = data.message4;
+
+        });
+    });
+});
+
+</script>
+
+{% endblock content%}
+    
+    

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>THAT | Sign-In</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<!link rel="icon" type="image/png"  href ="{{url_for('static', filename='images/icons/favicon.ico') }}"/>
+	<link rel="stylesheet" type="text/css"  href ="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css"  href ="{{url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+	<link rel="stylesheet" type="text/css"  href ="{{url_for('static', filename='vendor/animate/animate.css') }}">
+	<link rel="stylesheet" type="text/css"  href ="{{url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+	<link rel="stylesheet" type="text/css"  href ="{{url_for('static', filename='vendor/select2/select2.min.css') }}">
+	<link rel="stylesheet" type="text/css"  href ="{{url_for('static', filename='css/util.css') }}">
+	<link rel="stylesheet" type="text/css"  href ="{{url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+	<div class="limiter" style="background-color: #FEFCFE; ">
+		<div class="container-login100">
+			<div class="wrap-login100" style="background-color: #FEFCFE; height: 600px;">
+				<div class="login100-pic js-tilt" data-tilt >
+					<img src="{{url_for('static',filename='images/home.svg')}}">
+				</div>
+				<div class="login100-pic">
+					<span class="login100-form-title" style="margin-top: -120px;">
+						<img src="{{url_for('static',filename='login.gif')}}" style="width: 200px;"><br>
+						<br><h6>THAT Hearing Assistance & Transcription</h6>
+					</span>
+				</form>
+				<div style="height: 520px; width: 600px;">
+					<div class="col-md-8" style="margin-top: 0px;">
+						<div class="content-section">
+							<h3>Latest Stats:</h3>
+								<ol class="list-group">
+									<li class="list-group-item list-group-item-warning">{{db.session.query(User).count()}} users have already registered.</li>
+									<li class="list-group-item list-group-item-success">A total of {{db.session.query(Lecture).count()}} lectures have been scheduled.</li>
+								</ol>
+								<br>
+								What are you waiting for? <a href="{{url_for('register')}}">Join THAT now</a>    .<br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src=" { { url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+	<script src=" { { url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+	<script src=" { { url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+	<script src=" { { url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+	<script src=" { { url_for('static', filename='vendor/tilt/tilt.jquery.min.js') }}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+	<script src=" { { url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

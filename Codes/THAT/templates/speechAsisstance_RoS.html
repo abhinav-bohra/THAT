@@ -1,0 +1,81 @@
+{% extends "layout.html"%}
+{% block content %}
+<div class="page-header">
+    <h3 class="page-title">Speech Assistance</h3>
+</div>
+
+<div class="row grid-margin">
+    <div class="col-12">
+        <div class="card card-statistics">
+        <div class="card-body">
+            <div class="d-flex flex-column flex-md-row align-items-left">
+                <div class="statistics-item">
+                <p>
+                    <i class="icon-sm fa fa-play-circle mr-2"></i>
+                    Rate of Speech Test
+                </p>
+                <button class="btn btn-outline-light btn-sm"><h5>Take a Test Now</h5></button>
+                 </div>
+                <div class="statistics-item" style="margin-left: -30px;">
+                <p>
+                    <i class="icon-sm fas fa-microphone-alt mr-2"></i>
+                    Your Speech Rate
+                </p>
+                <h3>135 words/min</h3>
+                </div>
+                <div class="statistics-item" style="margin-left: -30px;">
+                <p>
+                    <i class="icon-sm fas fa-signal mr-2"></i>
+                    Average Speech Rate
+                </p>
+                <h3>120 words/min</h3>
+                </div>
+            
+                <div class="statistics-item" style="margin-left: -30px;">
+                    <p>
+                        <i class="icon-sm fas fa-chart-bar mr-2"></i>
+                        Previous Speech Rate
+                    </p>
+                    <h3>NA</h3>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">
+            <i class="fas fa-microphone-alt"></i>
+            Your Rate of Speech
+            </h4>
+            <h2 class="mb-5">We are listening<span class="text-muted h4 font-weight-normal">Say something</span></h2>
+            <!canvas id="sales-chart"></canvas>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">
+            <i class="fas fa-info-circle"></i>
+            Note
+            </h4>              
+            <h5>Speaking Rate (wpm) = total words / number of minutes</h5>
+            <br><br>
+            <h4 style="color:#521665;"><b>Average Speech Rates <br></h4><br>
+            <h6>
+                <b>Conversational:</b> Between 120 - 150 wpm<br><br>
+                <b>Presentations</b>: Between 100 - 150 wpm for a comfortable pace <br><br>
+                <b>Audiobooks:</b> Between 150 - 160 wpm, which is the upper range that people comfortably hear and vocalise words<br><br>
+            </p><br>
+            <p style="color: #5F0A60;">*wpm = words per minute</p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock content%}
+
