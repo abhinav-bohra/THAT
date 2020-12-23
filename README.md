@@ -2,7 +2,7 @@
 A webapp to improve online learning experience of people with hearing impairement and thus promote inclusive education.
 
 ## Screenshots
-<p><img src="THAT_Screenshots/THAT_Collage1.jpg" width="1520" height="1240" /></p><br>
+<p><img src="THAT_Screenshots/THAT_Collage1.jpg" width="1520" height="1040" /></p><br>
 
 ## Motivation
 There are over 2 million children with hearing disability in India, and out of these, around
@@ -33,12 +33,12 @@ transcribed into text real-time, just like auto-generated captioning on YouTube.
 transcription starts as soon as the user hits the play button and automatically gets saved
 at the end of the lecture.
 
-<p><br><img src="THAT_Screenshots/Feature_1.png" width="1220" height="540" /></p>
+<p><br><img src="THAT_Screenshots/Feature_1.png" width="1220" height="540" /></p><br>
 
 ### - Transcripts
 Go through saved lecture trancripts anytime for revision.
 
-<p><br><img src="THAT_Screenshots/Feature_2.png" width="1220" height="540" /></p>
+<p><br><img src="THAT_Screenshots/Feature_2.png" width="1220" height="540" /></p><br>
 
 ### - Speech Assistance
 Built for assisting users with their speech of rate. While speaking, the app will show the
@@ -46,7 +46,7 @@ users whether their speech is fast/perfect/slow or loud/perfect/soft. This featu
 them to assess themselves and improve with time. This will simultaneously improve their
 vocal skills as well as help them in effective communicating during the class.
 
-<p><br><img src="THAT_Screenshots/Feature_3.png" width="1220" height="540" /></p>
+<p><br><img src="THAT_Screenshots/Feature_3.png" width="1220" height="540" /></p><br>
 
 ## - Feedback Feature
 An indispensable aspect for any hearing impaired student is communication. The
@@ -55,7 +55,7 @@ can then be reviewed and the professor can respond to them. This will not only e
 smooth teaching process, but also put in place a proper communication channel
 between the two.
 
-<p><br><img src="THAT_Screenshots/Feedback.png" width="1220" height="540" /></p>
+<p><br><img src="THAT_Screenshots/Feedback.png" width="1220" height="540" /></p><br>
 
 ## Getting Started
 
