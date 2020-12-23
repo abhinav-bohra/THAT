@@ -2,9 +2,9 @@
 A webapp to improve online learning experience of people with hearing impairement and thus promote inclusive education.
 
 ## Screenshots
-<p><img src="THAT_Screenshots/THAT_Collage1.jpg" width="1220" height="1540" /></p>
+<p><img src="THAT_Screenshots/THAT_Collage1.jpg" width="1520" height="1240" /></p>
 <br><br>
-<p><img src="THAT_Screenshots/THAT_Collage2.jpg" width="1220" height="1040" /></p>
+<p><img src="THAT_Screenshots/THAT_Collage2.jpg" width="1520" height="1040" /></p>
 
 ## Motivation
 There are over 2 million children with hearing disability in India, and out of these, around
@@ -35,7 +35,6 @@ transcribed into text real-time, just like auto-generated captioning on YouTube.
 transcription starts as soon as the user hits the play button and automatically gets saved
 at the end of the lecture.
 
-![Live Transcript](https://github.com/abhinav-bohra/THAT/blob/master/THAT_Screenshots/Feature_1.png)
 <p><br><img src="THAT_Screenshots/Feature_1.png" width="1220" height="540" /></p>
 
 ### - Speech Assistance
@@ -44,7 +43,6 @@ users whether their speech is fast/perfect/slow or loud/perfect/soft. This featu
 them to assess themselves and improve with time. This will simultaneously improve their
 vocal skills as well as help them in effective communicating during the class.
 
-![Speech Assistance](https://github.com/abhinav-bohra/THAT/blob/master/THAT_Screenshots/Feature_2.png)
 <p><br><img src="THAT_Screenshots/Feature_2.png" width="1220" height="540" /></p>
 
 ## - Feedback Feature
