@@ -52,7 +52,9 @@ smooth teaching process, but also put in place a proper communication channel
 between the two.
 
 ![Feedback Feature](https://github.com/abhinav-bohra/THAT/blob/master/THAT_Screenshots/Feature_3.png)
-
+<p>
+    <img src="THAT_Screenshots/Feature_3.png" width="220" height="240" />
+</p>
 ## Getting Started
 
 Download or clone this repository on your system. See deployment for notes on how to deploy 
