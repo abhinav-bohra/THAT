@@ -1,2 +1,2 @@
-# THAT_Team_Invictus
-T4SNE Project
+#THAT Hearing Assistance and Transcription
+A webapp to improve online learning experience of people with hearing impairement and thus promote inclusive education.
