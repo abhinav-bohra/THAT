@@ -24,8 +24,8 @@ wouldn’t know how to pronounce words. And with assistance, they try to learn t
 but still lack direction on the way of speaking.
 
 ## Screenshots
-![THAT](https://github.com/abhinav-bohra/THAT/blob/master/THAT_Screenshots/THAT_Collage1.jpg)
-![THAT](https://github.com/abhinav-bohra/THAT/blob/master/THAT_Screenshots/THAT_Collage2.jpg)
+<p><img src="THAT_Screenshots/THAT_Collage1.jpg" width="1220" height="540" /></p>
+<p><img src="THAT_Screenshots/THAT_Collage2.jpg" width="1220" height="540" /></p>
 
 ##  Objectives/ Features
 ### - Live Transcript
@@ -35,6 +35,7 @@ transcription starts as soon as the user hits the play button and automatically 
 at the end of the lecture.
 
 ![Live Transcript](https://github.com/abhinav-bohra/THAT/blob/master/THAT_Screenshots/Feature_1.png)
+<p><img src="THAT_Screenshots/Feature_1.png" width="1220" height="540" /></p>
 
 ### - Speech Assistance
 Built for assisting users with their speech of rate. While speaking, the app will show the
@@ -43,6 +44,7 @@ them to assess themselves and improve with time. This will simultaneously improv
 vocal skills as well as help them in effective communicating during the class.
 
 ![Speech Assistance](https://github.com/abhinav-bohra/THAT/blob/master/THAT_Screenshots/Feature_2.png)
+<p><img src="THAT_Screenshots/Feature_2.png" width="1220" height="540" /></p>
 
 ## - Feedback Feature
 An indispensable aspect for any hearing impaired student is communication. The
@@ -51,7 +53,8 @@ can then be reviewed and the professor can respond to them. This will not only e
 smooth teaching process, but also put in place a proper communication channel
 between the two.
 
-<p> <img src="THAT_Screenshots/Feature_3.png" width="1220" height="540" /> </p>
+<p><img src="THAT_Screenshots/Feature_3.png" width="1220" height="540" /></p>
+
 ## Getting Started
 
 Download or clone this repository on your system. See deployment for notes on how to deploy 
