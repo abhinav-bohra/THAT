@@ -2,7 +2,7 @@
 A webapp to improve online learning experience of people with hearing impairement and thus promote inclusive education.
 
 ## Screenshots
-<p><img src="THAT_Screenshots/THAT_Collage1.jpg" width="1520" height="1040" /></p><br>
+<p><img src="THAT_Screenshots/THAT_Collage1.jpg" width="1520" height="940" /></p><br>
 
 ## Motivation
 There are over 2 million children with hearing disability in India, and out of these, around
