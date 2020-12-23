@@ -24,8 +24,8 @@ wouldn’t know how to pronounce words. And with assistance, they try to learn t
 but still lack direction on the way of speaking.
 
 ## Screenshots
-![THAT](https://github.com/abhinav-bohra/THAT/blob/master/Screenshots/Collage1.jpg)
-![THAT](https://github.com/abhinav-bohra/THAT/blob/master/Screenshots/Collage2.jpg)
+![THAT](https://github.com/abhinav-bohra/THAT/blob/master/THAT_Screenshots/THAT_Collage1.jpg)
+![THAT](https://github.com/abhinav-bohra/THAT/blob/master/THAT_Screenshots/THAT_Collage2.jpg)
 
 ##  Objectives/ Features
 ### - Live Transcript
@@ -34,7 +34,7 @@ transcribed into text real-time, just like auto-generated captioning on YouTube.
 transcription starts as soon as the user hits the play button and automatically gets saved
 at the end of the lecture.
 
-![THAT](https://github.com/abhinav-bohra/THAT/blob/master/Screenshots/Collage1.jpg)
+![THAT](https://github.com/abhinav-bohra/THAT/blob/master/THAT_Screenshots/Feature 1.png)
 
 ### - Speech Assistance
 Built for assisting users with their speech of rate. While speaking, the app will show the
@@ -42,7 +42,7 @@ users whether their speech is fast/perfect/slow or loud/perfect/soft. This featu
 them to assess themselves and improve with time. This will simultaneously improve their
 vocal skills as well as help them in effective communicating during the class.
 
-![THAT](https://github.com/abhinav-bohra/THAT/blob/master/Screenshots/Collage1.jpg)
+![THAT](https://github.com/abhinav-bohra/THAT/blob/master/THAT_Screenshots/Feature 2.png)
 
 ## - Feedback Feature
 An indispensable aspect for any hearing impaired student is communication. The
@@ -51,7 +51,7 @@ can then be reviewed and the professor can respond to them. This will not only e
 smooth teaching process, but also put in place a proper communication channel
 between the two.
 
-![THAT](https://github.com/abhinav-bohra/THAT/blob/master/Screenshots/Collage1.jpg)
+![THAT](https://github.com/abhinav-bohra/THAT/blob/master/THAT_Screenshots/Feature 3.png)
 
 ## Getting Started
 
