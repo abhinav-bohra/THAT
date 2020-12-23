@@ -81,6 +81,7 @@ the project on a live system.
 
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/) 
 * [MySQLite](https://www.sqlite.org/index.html) 
+* [Google Speech APIs](https://cloud.google.com/speech-to-text/)
 
 ## Contributing
 
