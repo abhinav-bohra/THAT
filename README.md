@@ -27,25 +27,28 @@ but still lack direction on the way of speaking.
 ![THAT](https://github.com/abhinav-bohra/THAT/blob/master/Screenshots/Collage1.jpg)
 ![THAT](https://github.com/abhinav-bohra/THAT/blob/master/Screenshots/Collage2.jpg)
 
-##  Objectives
+##  Objectives/ Features
 ### - Live Transcript
 Aimed for the students who can attend lectures where the audio automatically gets
 transcribed into text real-time, just like auto-generated captioning on YouTube. The
 transcription starts as soon as the user hits the play button and automatically gets saved
 at the end of the lecture.
+![THAT](https://github.com/abhinav-bohra/THAT/blob/master/Screenshots/Collage1.jpg)
+
 ### - Speech Assistance
 Built for assisting users with their speech of rate. While speaking, the app will show the
 users whether their speech is fast/perfect/slow or loud/perfect/soft. This feature helps
 them to assess themselves and improve with time. This will simultaneously improve their
 vocal skills as well as help them in effective communicating during the class.
-Feedback Feature
-
-### - An indispensable aspect for any hearing impaired student is communication. The
+![THAT](https://github.com/abhinav-bohra/THAT/blob/master/Screenshots/Collage1.jpg)
+## - Feedback Feature
+An indispensable aspect for any hearing impaired student is communication. The
 application allows the student to submit their feedback about the lecture. The feedback
 can then be reviewed and the professor can respond to them. This will not only ensure a
 smooth teaching process, but also put in place a proper communication channel
-between the two
+between the two.
 
+![THAT](https://github.com/abhinav-bohra/THAT/blob/master/Screenshots/Collage1.jpg)
 ## Getting Started
 
 Download or clone this repository on your system. See deployment for notes on how to deploy 
@@ -63,11 +66,11 @@ the project on a live system.
 - 4. Create an evironment using the following command -> virtualenv THAT_env
 - 5. Activate the evironment using the following command  
 ```
-    -> .\THAT_env\Scripts\activate   (For Windows)
-    -> source THAT_env\bin\activate  (For Ubuntu)
+     .\THAT_env\Scripts\activate   (For Windows)
+      source THAT_env\bin\activate  (For Ubuntu)
 ```
-- 6. Run command ```-> pip3 install -r requirements.txt```
-- 7. Run command ```-> python3 application.py```
+- 6. Run command ```pip3 install -r requirements.txt```
+- 7. Run command ```python3 application.py```
 - 8. Click on localhost link generated after execution of previous command
 
 ## Built With
