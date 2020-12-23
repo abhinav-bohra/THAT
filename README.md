@@ -27,11 +27,16 @@ wouldn’t know how to pronounce words. And with assistance, they try to learn t
 but still lack direction on the way of speaking.
 
 ##  Objectives/ Features
-### - Live Transcript
+### - Live Subtitles
 Aimed for the students who can attend lectures where the audio automatically gets
 transcribed into text real-time, just like auto-generated captioning on YouTube. The
 transcription starts as soon as the user hits the play button and automatically gets saved
 at the end of the lecture.
+
+<p><br><img src="THAT_Screenshots/Feature_1.png" width="1220" height="540" /></p>
+
+### - Transcripts
+Go through saved lecture trancripts anytime for revision.
 
 <p><br><img src="THAT_Screenshots/Feature_2.png" width="1220" height="540" /></p>
 
